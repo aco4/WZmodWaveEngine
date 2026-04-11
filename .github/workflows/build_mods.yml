@@ -40,7 +40,7 @@ jobs:
           # 1. Start with everything from mod/
           rsync -a mod/ dist/
           # 2. Overlay map-specific files (same filename wins)
-          rsync -a maps/${{ matrix.map }}/ dist/
+          rsync -a maps/${{ matrix.map }}/ dist/WaveEngine/
 
       - name: Zip the merged output
         run: |

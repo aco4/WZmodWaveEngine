@@ -25,6 +25,10 @@ function upgrade_tick()
 	});
 	Object.keys(Stats.Weapon).forEach(componentName =>
 	{
+		if (componentName === "Command Turret")
+		{
+			return;
+		}
 		Upgrades[ENEMY].Weapon[componentName].Damage         += 4;
 		Upgrades[ENEMY].Weapon[componentName].RadiusDamage   += 4;
 		Upgrades[ENEMY].Weapon[componentName].RepeatDamage   += 4;

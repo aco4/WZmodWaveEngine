@@ -42,15 +42,10 @@ jobs:
           # 2. Overlay map-specific files (same filename wins)
           rsync -a maps/${{ matrix.map }}/ dist/WaveEngine/
 
-      - name: Zip the merged output
-        run: |
-          cd dist
-          zip -r ../WaveEngine-${{ matrix.map }}.zip .
-
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: WaveEngine-${{ matrix.map }}
-          path: WaveEngine-${{ matrix.map }}.zip
+          path: dist/
           retention-days: 30
           if-no-files-found: error

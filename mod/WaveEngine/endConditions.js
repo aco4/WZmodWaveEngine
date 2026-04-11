@@ -13,9 +13,9 @@ function endConditions_tick()
 		{
 			endConditions_finalize(player, false);
 		}
-        if (isSpectator(-1)) {
-            gameOverMessage(false);
-        }
+		if (isSpectator(-1)) {
+			gameOverMessage(false);
+		}
 	}
 	else
 	{

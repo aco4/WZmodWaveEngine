@@ -38,11 +38,6 @@ const TEMPLATES = [
 	"Heavy Cannon Tiger Tracks",
 	"Command Turret Tiger Tracks",
 
-	// Leopard VTOL
-	"VTOL Cluster Bomb Bay Leopard VTOL",
-	"VTOL Heap Bomb Bay Leopard VTOL",
-	"VTOL Phosphor Bomb Bay Leopard VTOL",
-
 	// Artillery
 	"Sensor Turret Leopard Tracks",
 	"Sensor Turret Panther Tracks",

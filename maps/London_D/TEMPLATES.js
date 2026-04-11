@@ -1,11 +1,4 @@
 const TEMPLATES = [
-	// Cyborgs
-	"Machinegunner Cyborg Light Body Cyborg Propulsion",
-	"Cyborg Flamer Cyborg Light Body Cyborg Propulsion",
-	"Heavy Gunner Cyborg Light Body Cyborg Propulsion",
-	"*Cyborg Grenade Weapon* Cyborg Light Body Cyborg Propulsion",
-	"Cyborg Lancer Cyborg Light Body Cyborg Propulsion",
-
 	// Leopard tanks
 	"Flamer Leopard Tracks",
 	"Heavy Machinegun Leopard Tracks",
@@ -37,12 +30,4 @@ const TEMPLATES = [
 	"Assault Cannon Tiger Tracks",
 	"Heavy Cannon Tiger Tracks",
 	"Command Turret Tiger Tracks",
-
-	// Artillery
-	"Sensor Turret Leopard Tracks",
-	"Sensor Turret Panther Tracks",
-	"Sensor Turret Tiger Tracks",
-	"Mortar Panther Tracks",
-	"Bombard Panther Tracks",
-	"Pepperpot Panther Tracks",
 ];

@@ -24,7 +24,7 @@ Interesting files to configure:
 - `TEMPLATES.js`
 - `upgrade.js`
 - `timer.js`
-- `spawn_tick()` in `spawn.js`
+- `spawn.js`
 
 ## License
 SPDX-License-Identifier: GPL-2.0-or-later

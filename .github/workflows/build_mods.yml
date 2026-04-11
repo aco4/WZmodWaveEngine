@@ -1,0 +1,56 @@
+name: Build mods for each map
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  # ── Step 1: Discover maps dynamically ─────────────────────────────────────
+  detect-maps:
+    runs-on: ubuntu-latest
+    outputs:
+      maps: ${{ steps.list.outputs.maps }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: List maps
+        id: list
+        run: |
+          # Produces a JSON array like ["Florence","Chicago"]
+          maps=$(ls -1 maps/ | jq -R . | jq -sc .)
+          echo "maps=$maps" >> "$GITHUB_OUTPUT"
+
+  # ── Step 2: Build each mod in parallel ────────────────────────────────────
+  build-mods:
+    needs: detect-maps
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        map: ${{ fromJson(needs.detect-maps.outputs.maps) }}
+      fail-fast: false           # one broken map doesn't cancel the others
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Merge mod + map-specific → dist/
+        run: |
+          mkdir -p dist/
+          # 1. Start with everything from mod/
+          rsync -a mod/ dist/
+          # 2. Overlay map-specific files (same filename wins)
+          rsync -a maps/${{ matrix.map }}/ dist/
+
+      - name: Zip the merged output
+        run: |
+          cd dist
+          zip -r ../WaveEngine-${{ matrix.map }}.zip .
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.map }}
+          path: ${{ matrix.map }}.zip
+          retention-days: 30
+          if-no-files-found: error

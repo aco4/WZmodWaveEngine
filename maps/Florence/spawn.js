@@ -16,6 +16,6 @@ function spawn_tick()
 			Template.spawn(Template.fromString(template), ENEMY, x, y);
 		}
 	}
-	const delay = 45000 * Math.E**(-0.000001*gameTime);
+	const delay = 42500 * Math.E**(-0.000001*gameTime);
 	queue("spawn_tick", delay);
 }

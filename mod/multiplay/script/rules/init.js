@@ -6,6 +6,7 @@ include("WaveEngine/lib/Template.js");
 // Include global variables
 include("WaveEngine/ENEMY.js");
 include("WaveEngine/TEMPLATES.js");
+include("WaveEngine/SPAWN_POINTS.js");
 
 // Include rest
 include("WaveEngine/reticule.js");

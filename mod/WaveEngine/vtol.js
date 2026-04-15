@@ -2,7 +2,7 @@ namespace("vtol_");
 
 function vtol_eventStartLevel()
 {
-	setTimer("vtol_despawn", 3000);
+	setTimer("vtol_despawn", 3000); // every 3 seconds
 }
 
 function vtol_despawn()

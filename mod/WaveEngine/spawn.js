@@ -7,12 +7,16 @@ function spawn_eventMissionTimeout()
 
 function spawn_tick()
 {
+	if (spawn_positions.length === 0)
+	{
+		return;
+	}
 	const minute = Math.ceil(gameTime / 1000 / 60);
 	const length = Math.min(TEMPLATES.length, minute);
 	const template = TEMPLATES[syncRandom(length)];
-	const [x, y] = spawn_positions[syncRandom(spawn_positions.length)];
 	if (template)
 	{
+		const [x, y] = spawn_positions[syncRandom(spawn_positions.length)];
 		addDroid(ENEMY, x, y, template.name, template.body, template.propulsion, "", "", ...template.turrets);
 	}
 	queue("spawn_tick", spawn_delay);

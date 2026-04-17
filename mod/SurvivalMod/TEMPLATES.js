@@ -1,9 +1,5 @@
 const TEMPLATES = [
 	null,
-	null,
-	null,
-	null,
-	null,
 	{ turrets: ["BaBaMG"          ], body: "B1BaBaPerson01"    , propulsion: "BaBaLegs"  , name: "Machinegun Person"                                           },
 	{ turrets: ["bTrikeMG"        ], body: "B4body-sml-trike01", propulsion: "BaBaProp"  , name: "Machinegun Trike"                                            },
 	{ turrets: ["BuggyMG"         ], body: "B3body-sml-buggy01", propulsion: "BaBaProp"  , name: "Machinegun Buggy"                                            },

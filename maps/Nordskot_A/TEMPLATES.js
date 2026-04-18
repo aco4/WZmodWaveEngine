@@ -14,8 +14,6 @@ const TEMPLATES = [
 	// { turrets: ["BabaFlame"       ], body: "BusBody"           , propulsion: "BaBaProp", name: "Scavenger Flamer Bus"       },
 	{ turrets: ["BusCannon"       ], body: "FireBody"          , propulsion: "BaBaProp", name: "Scavenger Cannon Firetruck"           },
 	{ turrets: ["BusCannon"       ], body: "BusBody"           , propulsion: "BaBaProp", name: "Scavenger Cannon Bus"                 },
-	{ turrets: ["MG1Mk1"          ], body: "Body4ABT"          , propulsion: "hover01" , name: "Machinegun Bug Hover"                 },
-	{ turrets: ["MG2Mk1"          ], body: "Body4ABT"          , propulsion: "hover01" , name: "Twin Machinegun Bug Hover"            },
 	{ turrets: ["Cannon1Mk1"      ], body: "Body4ABT"          , propulsion: "hover01" , name: "Light Cannon Bug Hover"               },
 	{ turrets: ["Cannon1Mk1"      ], body: "Body4ABT"          , propulsion: "hover01" , name: "Light Cannon Bug Hover"               },
 	{ turrets: ["Cannon1Mk1"      ], body: "Body8MBT"          , propulsion: "hover01" , name: "Light Cannon Scorpion Hover"          },
